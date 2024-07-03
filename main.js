@@ -11,25 +11,27 @@ const elBtn8 = document.querySelector("#btn8");
 const elBtn9 = document.querySelector("#btn9");
 
 elBtn0.addEventListener("click", function () {
-  const value = 0;
+//   const value = 0;
   if (+elInpuit.value < 10) {
-    elInpuit.value = elInpuit.value + value;
+    elInpuit.value = elBtn0.value;
   }
-  if (+elInpuit.value >= 10) {
-    elInpuit.value = elInpuit.value + value;
-  }
-});
-elBtn1.addEventListener("click", function () {
-  const value = 1;
-  if (+elInpuit.value.length == 1 ) {
-    // elInpuit.value = elInpuit.value + value;
-    // document.body.style.background = 'red'
-  }
-//   else if (elInpuit.length == 2 ) {
+//   if (+elInpuit.value >= 10) {
 //     elInpuit.value = elInpuit.value + value;
-//     document.body.style.background = 'yellow'
 //   }
 });
+
+elBtn1.addEventListener("click", function () {
+      if (+elInpuit.value < 10) {
+        elInpuit.value = elInpuit.value + elBtn1.value;
+        document.getElementById('all_rounds').style.border = 'solid 2px red' 
+      }
+      
+      if (+elInpuit.value >= 10 && +elInpuit.value < 99 ) {
+        document.getElementById('rounds2').style.border = 'solid 2px red'
+        document.getElementById('all_rounds').style.border = 'none'  
+    }
+    });
+
 
 elBtn2.addEventListener("click", function () {
   const value = 2;
