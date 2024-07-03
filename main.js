@@ -15,8 +15,6 @@ elBtn0.addEventListener("click", function () {
     elInput.value = elInput.value + elBtn0.value;
     document.getElementById("all_rounds").style.border = "solid red";
   }
-  console.log(elInput.value.length, "");
-
   if (+elInput.value >= 10 && +elInput.value < 99) {
     document.getElementById("rounds2").style.border = "solid red";
     document.getElementById("all_rounds").style.border = "none";
@@ -33,8 +31,6 @@ elBtn1.addEventListener("click", function () {
     document.getElementById("rounds2").style.border = "solid red";
     document.getElementById("all_rounds").style.border = "none";
   }
-  //
-  console.log(elInput.value);
 
   if (elInput.value.includes("0")) {
     elInput.value = Number(elInput.value);
